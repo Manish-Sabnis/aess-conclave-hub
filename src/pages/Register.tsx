@@ -18,11 +18,10 @@ const Register = () => {
       title: "IEEE AESS Student Member",
       price: "Special Rate",
       features: [
-        "Full access to all sessions",
+        "Free access to all sessions",
         "Conference materials",
         "Certificate of participation",
         "Networking events",
-        "Workshop access",
       ],
       highlight: true,
     },
@@ -30,7 +29,7 @@ const Register = () => {
       title: "IEEE Student Member",
       price: "Standard Rate",
       features: [
-        "Full access to all sessions",
+        "Full access to all sessions at Rs. 100",
         "Conference materials",
         "Certificate of participation",
         "Networking events",
@@ -41,9 +40,10 @@ const Register = () => {
       title: "Non-IEEE Student Member",
       price: "General Rate",
       features: [
-        "Access to main sessions",
+        "Full access to all sessions at Rs. 200",
         "Conference materials",
         "Certificate of participation",
+        "Networking events",
       ],
       highlight: false,
     },
