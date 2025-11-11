@@ -63,7 +63,7 @@ const Home = () => {
               },
               {
                 icon: Calendar,
-                title: "Multi-Day Event",
+                title: "One Day Event",
                 description: "Comprehensive program with workshops and sessions",
               },
               {
