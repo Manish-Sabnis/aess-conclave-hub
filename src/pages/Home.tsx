@@ -11,22 +11,35 @@ const Home = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzAwYmNkNCIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-block">
-              <span className="text-primary text-sm font-semibold tracking-wider uppercase px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-                IEEE AESS
-              </span>
-            </div>
-            
+          <div className="max-w-5xl mx-auto text-center space-y-8">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
-                Technology Conclave
+                IEEE AESS Technology Conclave
               </span>
             </h1>
+            
+            <div className="text-2xl md:text-3xl font-semibold tracking-widest text-primary">
+              INNOVATE. INTEGRATE. INSPIRE.
+            </div>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               Join us for an extraordinary gathering of minds in aerospace and electronics technology
             </p>
+
+            {/* Logos Section */}
+            <div className="pt-8 pb-4">
+              <p className="text-sm text-muted-foreground mb-6 uppercase tracking-wider">In Collaboration With</p>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <div
+                    key={num}
+                    className="w-32 h-24 rounded-lg bg-secondary/30 border border-border/50 flex items-center justify-center hover:bg-secondary/50 transition-all duration-300"
+                  >
+                    <span className="text-muted-foreground text-sm">Logo {num}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link to="/register">

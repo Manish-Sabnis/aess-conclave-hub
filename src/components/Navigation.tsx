@@ -19,11 +19,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <NavLink to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">AE</span>
-            </div>
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              IEEE AESS
+              IEEE AESS Conclave
             </span>
           </NavLink>
 
