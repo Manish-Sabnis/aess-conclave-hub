@@ -25,21 +25,6 @@ const Home = () => {
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               Join us for an extraordinary gathering of minds in aerospace and electronics technology
             </p>
-
-            {/* Logos Section */}
-            <div className="pt-8 pb-4">
-              <p className="text-sm text-muted-foreground mb-6 uppercase tracking-wider">In Collaboration With</p>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center max-w-4xl mx-auto">
-                {[1, 2, 3, 4, 5].map((num) => (
-                  <div
-                    key={num}
-                    className="w-32 h-24 rounded-lg bg-secondary/30 border border-border/50 flex items-center justify-center hover:bg-secondary/50 transition-all duration-300"
-                  >
-                    <span className="text-muted-foreground text-sm">Logo {num}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link to="/register">
