@@ -110,6 +110,95 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Venue Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Event <span className="text-primary">Venue</span>
+          </h2>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Card className="p-8 bg-gradient-card border-border/50 space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Location Details</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <MapPin className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Venue</h4>
+                      <p className="text-muted-foreground">
+                        Main Auditorium<br />
+                        Technology Campus<br />
+                        University District
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Calendar className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Date & Time</h4>
+                      <p className="text-muted-foreground">
+                        To be announced soon<br />
+                        Full day event with refreshments
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <MapPin className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Getting There</h4>
+                      <p className="text-muted-foreground">
+                        Accessible by public transport<br />
+                        Parking available on campus<br />
+                        Nearest Metro: Tech Park Station
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-gradient-card border-border/50">
+              <h3 className="text-2xl font-bold mb-4">Campus Map</h3>
+              <div className="aspect-video bg-secondary/20 rounded-lg flex items-center justify-center border border-border/50">
+                <div className="text-center space-y-2">
+                  <MapPin className="w-12 h-12 text-primary mx-auto" />
+                  <p className="text-muted-foreground">
+                    Detailed venue map<br />
+                    will be shared with registered participants
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 space-y-3">
+                <h4 className="font-semibold">Nearby Landmarks</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                    <span>Tech Park Metro Station (500m)</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                    <span>Central Library (200m)</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                    <span>Student Cafeteria (150m)</span>
+                  </li>
+                </ul>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
