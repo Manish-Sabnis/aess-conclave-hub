@@ -22,13 +22,13 @@ const Navigation = () => {
   return (
     <>
       {/* Logos Section */}
-      <div className="bg-secondary/30 border-b border-border/50 py-4">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center justify-items-center max-w-5xl mx-auto">
+      <div className="bg-secondary/30 border-b border-border/50 py-6">
+        <div className="container mx-auto px-8">
+          <div className="flex items-center justify-between gap-8">
             {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
               <div
                 key={index}
-                className="w-24 h-16 rounded-lg bg-background/50 border border-border/50 flex items-center justify-center hover:bg-background transition-all duration-300 p-2"
+                className="w-32 h-24 md:w-40 md:h-28 rounded-lg bg-background/50 border border-border/50 flex items-center justify-center hover:bg-background transition-all duration-300 p-3"
               >
                 <img src={logo} alt={`Partner logo ${index + 1}`} className="w-full h-full object-contain" />
               </div>
