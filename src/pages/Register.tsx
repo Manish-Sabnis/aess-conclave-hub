@@ -1,18 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 const Register = () => {
-  const { toast } = useToast();
-
-  const handleRegistrationClick = () => {
-    toast({
-      title: "Coming Soon!",
-      description: "Registrations will open soon. Stay tuned!",
-    });
-  };
-
   const registrationTypes = [
     {
       title: "IEEE AESS Student Member",
@@ -24,6 +14,7 @@ const Register = () => {
         "Networking events",
       ],
       highlight: true,
+      formLink: "https://forms.gle/gfmSP88mTBwRdMNQA",
     },
     {
       title: "IEEE Student Member",
@@ -35,6 +26,7 @@ const Register = () => {
         "Networking events",
       ],
       highlight: false,
+      formLink: "https://forms.gle/yEnFJWj5NkjFgYux9",
     },
     {
       title: "Non-IEEE Student Member",
@@ -46,6 +38,7 @@ const Register = () => {
         "Networking events",
       ],
       highlight: false,
+      formLink: "https://forms.gle/sMXvrvL31quT7vFo8",
     },
   ];
 
@@ -93,9 +86,11 @@ const Register = () => {
 
               <Button
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                onClick={handleRegistrationClick}
+                asChild
               >
-                Register Now
+                <a href={type.formLink} target="_blank" rel="noopener noreferrer">
+                  Register Now
+                </a>
               </Button>
             </Card>
           ))}
