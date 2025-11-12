@@ -26,6 +26,17 @@ const Home = () => {
               Join us for an extraordinary gathering of minds in aerospace and electronics technology
             </p>
             
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-lg md:text-xl font-semibold text-foreground">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5 text-primary" />
+                <span>29th November 2025</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-muted-foreground">•</span>
+                <span>9:00 AM - 7:00 PM</span>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link to="/register">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow">
