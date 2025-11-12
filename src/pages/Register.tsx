@@ -106,7 +106,7 @@ const Register = () => {
             <h3 className="text-2xl font-bold mb-4">Registration Information</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">IEEE AESS Members:</strong> Members of the IEEE Aerospace and Electronics Society receive special discounted rates.
+                <strong className="text-foreground">IEEE AESS Members:</strong> Members of the IEEE Aerospace and Electronics Society receive free entry to the conclave.
               </p>
               <p>
                 <strong className="text-foreground">IEEE Members:</strong> Current IEEE student members are eligible for standard registration rates.
