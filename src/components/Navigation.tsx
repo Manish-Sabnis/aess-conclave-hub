@@ -28,7 +28,7 @@ const Navigation = () => {
             {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
               <div
                 key={index}
-                className="w-32 h-24 md:w-40 md:h-28 rounded-lg bg-background/50 border border-border/50 flex items-center justify-center hover:bg-background transition-all duration-300 p-3"
+                className={`${index === 3 ? 'w-44 md:w-52' : 'w-32 md:w-40'} h-24 md:h-28 rounded-lg bg-background/50 border border-border/50 flex items-center justify-center hover:bg-background transition-all duration-300 p-3`}
               >
                 <img src={logo} alt={`Partner logo ${index + 1}`} className="w-full h-full object-contain" />
               </div>
