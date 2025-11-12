@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Calendar, MapPin, Users, Rocket } from "lucide-react";
+import { Calendar, MapPin, Users, Rocket, Download } from "lucide-react";
 
 const Home = () => {
   return (
@@ -37,6 +37,12 @@ const Home = () => {
                   View Speakers
                 </Button>
               </Link>
+              <a href="/event-flyer.png" download="IEEE-AESS-Conclave-Flyer.png">
+                <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10">
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Flyer
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -141,7 +147,7 @@ const Home = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Date & Time</h4>
                       <p className="text-muted-foreground">
-                        To be announced soon<br />
+                        November 29, 2025<br />
                         Full day event with refreshments
                       </p>
                     </div>
@@ -166,15 +172,20 @@ const Home = () => {
 
             <Card className="p-8 bg-gradient-card border-border/50">
               <h3 className="text-2xl font-bold mb-4">Campus Map</h3>
-              <div className="aspect-video bg-secondary/20 rounded-lg flex items-center justify-center border border-border/50">
+              <a 
+                href="https://maps.app.goo.gl/FwJf4gKqMKNkAdax6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block aspect-video bg-secondary/20 rounded-lg flex items-center justify-center border border-border/50 hover:border-primary/50 transition-all duration-300 group"
+              >
                 <div className="text-center space-y-2">
-                  <MapPin className="w-12 h-12 text-primary mx-auto" />
+                  <MapPin className="w-12 h-12 text-primary mx-auto group-hover:scale-110 transition-transform" />
                   <p className="text-muted-foreground">
-                    Detailed venue map<br />
-                    will be shared with registered participants
+                    Click to view location<br />
+                    on Google Maps
                   </p>
                 </div>
-              </div>
+              </a>
               <div className="mt-6 space-y-3">
                 <h4 className="font-semibold">Nearby Landmarks</h4>
                 <ul className="space-y-2 text-muted-foreground">

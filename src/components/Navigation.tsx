@@ -2,6 +2,11 @@ import { useState } from "react";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo1 from "@/assets/logo1.png";
+import logo2 from "@/assets/logo2.png";
+import logo3 from "@/assets/logo3.png";
+import logo4 from "@/assets/logo4.png";
+import logo5 from "@/assets/logo5.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +25,12 @@ const Navigation = () => {
       <div className="bg-secondary/30 border-b border-border/50 py-4">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center justify-items-center max-w-5xl mx-auto">
-            {[1, 2, 3, 4, 5].map((num) => (
+            {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
               <div
-                key={num}
-                className="w-24 h-16 rounded-lg bg-background/50 border border-border/50 flex items-center justify-center hover:bg-background transition-all duration-300"
+                key={index}
+                className="w-24 h-16 rounded-lg bg-background/50 border border-border/50 flex items-center justify-center hover:bg-background transition-all duration-300 p-2"
               >
-                <span className="text-muted-foreground text-xs">Logo {num}</span>
+                <img src={logo} alt={`Partner logo ${index + 1}`} className="w-full h-full object-contain" />
               </div>
             ))}
           </div>
