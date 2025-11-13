@@ -48,7 +48,7 @@ const Home = () => {
                   View Speakers
                 </Button>
               </Link>
-              <a href="/event-flyer.png" download="IEEE-AESS-Conclave-Flyer.png">
+              <a href="/event_flyer.pdf" download="IEEE-AESS-Conclave-Flyer.pdf">
                 <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10">
                   <Download className="w-5 h-5 mr-2" />
                   Download Flyer
