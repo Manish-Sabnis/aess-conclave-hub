@@ -144,9 +144,9 @@ const Home = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Venue</h4>
                       <p className="text-muted-foreground">
-                        Main Auditorium<br />
-                        Technology Campus<br />
-                        University District
+                        KLE Technological University <br />
+                        Dr. M. S. Sheshgiri Campus <br />
+                        Belagavi - 590008
                       </p>
                     </div>
                   </div>
