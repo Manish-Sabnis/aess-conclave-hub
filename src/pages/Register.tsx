@@ -9,7 +9,7 @@ const Register = () => {
       price: "Special Rate",
       features: [
         "Free access to all sessions",
-        "Conference materials",
+        "Registration kit",
         "Certificate of participation",
         "Networking events",
       ],
@@ -21,7 +21,7 @@ const Register = () => {
       price: "Standard Rate",
       features: [
         "Full access to all sessions at Rs. 100",
-        "Conference materials",
+        "Registration kit",
         "Certificate of participation",
         "Networking events",
       ],
@@ -33,7 +33,7 @@ const Register = () => {
       price: "General Rate",
       features: [
         "Full access to all sessions at Rs. 200",
-        "Conference materials",
+        "Registration kit",
         "Certificate of participation",
         "Networking events",
       ],
