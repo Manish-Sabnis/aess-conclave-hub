@@ -116,7 +116,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen py-4 px-4 sm:py-24">
+    <div className="min-h-screen py-4 px-12 sm:py-24">
       <div className="mx-auto">
         {/* Countdown Timer - FIXED VERSION */}
         <div className="max-w-4xl mx-auto mb-6 sm:mb-24">
