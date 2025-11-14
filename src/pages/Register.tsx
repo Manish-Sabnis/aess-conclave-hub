@@ -9,7 +9,7 @@ const Register = () => {
       price: "Special Rate",
       features: [
         "Free access to all sessions",
-        "Registration kit",
+        "Conference materials",
         "Certificate of participation",
         "Networking events",
       ],
@@ -21,7 +21,7 @@ const Register = () => {
       price: "Standard Rate",
       features: [
         "Full access to all sessions at Rs. 100",
-        "Registration kit",
+        "Conference materials",
         "Certificate of participation",
         "Networking events",
       ],
@@ -33,12 +33,24 @@ const Register = () => {
       price: "General Rate",
       features: [
         "Full access to all sessions at Rs. 200",
-        "Registration kit",
+        "Conference materials",
         "Certificate of participation",
         "Networking events",
       ],
       highlight: false,
       formLink: "https://forms.gle/sMXvrvL31quT7vFo8",
+    },
+    {
+      title: "Professional Member",
+      price: "Complimentary Access",
+      features: [
+        "Free access to all sessions",
+        "Registration kit",
+        "Certificate of participation",
+        "Networking events",
+      ],
+      highlight: false,
+      formLink: "https://forms.gle/ShXkqEtQ5As6eKQF8",
     },
   ];
 
@@ -54,7 +66,7 @@ const Register = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {registrationTypes.map((type, index) => (
             <Card
               key={index}
@@ -108,6 +120,9 @@ const Register = () => {
               </p>
               <p>
                 <strong className="text-foreground">Non-IEEE Members:</strong> Open to all students interested in aerospace and electronics technology.
+              </p>
+              <p>
+                <strong className="text-foreground">Professional Members:</strong> Professionals and researchers are invited to attend with complimentary access.
               </p>
               <p className="text-sm mt-6 text-center">
                 Registration includes access to all technical sessions, keynote presentations, and networking events.
