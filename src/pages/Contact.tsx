@@ -6,22 +6,60 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "manusabnis@ieee.org",
-      link: "mailto:manusabnis@ieee.org",
+      details: [
+        {
+          label: "Student Branch Chair",
+          email: "manusabnis@ieee.org",
+          link: "mailto:manusabnis@ieee.org",
+        },
+        {
+          label: "Student Branch Vice-Chair",
+          email: "abhikhare344@ieee.org",
+          link: "mailto:abhikhare344@ieee.org",
+        },
+        {
+          label: "Coordinator 1",
+          email: "harshothy25@gmail.com",
+          link: "mailto:harshothy25@gmail.com",
+        },
+        {
+          label: "Coordinator 2",
+          email: "jaydeepnadkarni123@gmail.com",
+          link: "mailto:jaydeepnadkarni123@gmail.com",
+        },
+      ],
     },
     {
       icon: Phone,
       title: "Phone",
       details: [
-        { num: "+91 7847032997", link: "tel:+917847032997" },
-        { num: "+91 9108733569", link: "tel:+919108733569" },
-        { num: "+91 7760932967", link: "tel:+917760932967" },
+        {
+          label: "Student Branch Chair",
+          num: "+91 7847032997",
+          link: "tel:+917847032997",
+        },
+        {
+          label: "Student Branch Vice-Chair",
+          num: "+91 7676061926",
+          link: "tel:+917676061926",
+        },
+        {
+          label: "Coordinator 1",
+          num: "+91 7619652769",
+          link: "tel:+917619652769",
+        },
+        {
+          label: "Coordinator 2",
+          num: "+91 9481740517",
+          link: "tel:+919481740517",
+        },
       ],
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "KLE Technological University, Dr. M. S. Sheshgiri Campus, Belagavi",
+      details:
+        "KLE Technological University, Dr. M. S. Sheshgiri Campus, Belagavi",
       link: "https://maps.app.goo.gl/NCTBvz9G2zKfhv5VA",
     },
     {
@@ -44,7 +82,7 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Contact Info Cards */}
+        {/* Contact Cards */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {contactInfo.map((item, index) => (
             <Card
@@ -54,19 +92,38 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
+
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
 
-              {/* Render phone numbers OR normal string */}
+              {/* Labeled Emails or Phones */}
               {Array.isArray(item.details) ? (
-                <div className="space-y-1">
-                  {item.details.map((ph, i) => (
-                    <a
-                      key={i}
-                      href={ph.link}
-                      className="block text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {ph.num}
-                    </a>
+                <div className="space-y-3">
+                  {item.details.map((entry, i) => (
+                    <div key={i}>
+                      <div className="text-foreground font-medium">
+                        {entry.label}
+                      </div>
+
+                      {/* Email field */}
+                      {entry.email && (
+                        <a
+                          href={entry.link}
+                          className="block text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          {entry.email}
+                        </a>
+                      )}
+
+                      {/* Phone field */}
+                      {entry.num && (
+                        <a
+                          href={entry.link}
+                          className="block text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          {entry.num}
+                        </a>
+                      )}
+                    </div>
                   ))}
                 </div>
               ) : (
@@ -93,22 +150,24 @@ const Contact = () => {
               </h4>
               <p>Registration will open soon. Please check back regularly for updates.</p>
             </div>
+
             <div>
               <h4 className="font-semibold text-foreground mb-2">
                 What is included in the registration fee?
               </h4>
               <p>
-                Access to all technical sessions, keynote presentations, conference materials,
-                certificate of participation, and networking events.
+                Access to all technical sessions, keynote presentations, conference
+                materials, certificate of participation, and networking events.
               </p>
             </div>
+
             <div>
               <h4 className="font-semibold text-foreground mb-2">
                 Can non-students attend?
               </h4>
               <p>
-                This conclave is primarily designed for students, but professionals are welcome
-                to contact us for special arrangements.
+                This conclave is primarily designed for students, but professionals are
+                welcome to contact us for special arrangements.
               </p>
             </div>
           </div>
