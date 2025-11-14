@@ -4,15 +4,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-const Contact = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background text-4xl md:text-6xl font-bold text-primary">
-      Coming Soon
-    </div>
-  );
-};
+// const Contact = () => {
+//   return (
+//     <div className="min-h-screen flex items-center justify-center bg-background text-4xl md:text-6xl font-bold text-primary">
+//       Coming Soon
+//     </div>
+//   );
+// };
 
-export default Contact;
+// export default Contact;
 // const Contact = () => {
 //   const { toast } = useToast();
 
