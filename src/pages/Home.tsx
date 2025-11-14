@@ -173,7 +173,6 @@ const Home = () => {
                       <p className="text-muted-foreground">
                         Accessible by public transport<br />
                         Parking available on campus<br />
-                        Nearest Metro: Tech Park Station
                       </p>
                     </div>
                   </div>
@@ -202,15 +201,15 @@ const Home = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                    <span>Tech Park Metro Station (500m)</span>
+                    <span>4th Railway Gate (50m)</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                    <span>Central Library (200m)</span>
+                    <span>Native Hotels (1.8km)</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                    <span>Student Cafeteria (150m)</span>
+                    <span>3rd Railway Gate (1.8km)</span>
                   </li>
                 </ul>
               </div>
