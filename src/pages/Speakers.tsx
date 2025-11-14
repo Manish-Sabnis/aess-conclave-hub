@@ -1,47 +1,54 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import speaker1 from "@/assets/speaker1.png";
+import speaker2 from "@/assets/speaker2.png";
+import speaker3 from "@/assets/speaker3.png";
+import speaker4 from "@/assets/speaker4.png";
+import speaker5 from "@/assets/speaker5.png";
+import speaker6 from "@/assets/speaker6.png";
+
 const Speakers = () => {
   const speakers = [
     {
       name: "Lt. Gen. Ramesh Halagali",
       affiliation: "PVSM, AVSM, Deputy Chief of Army Staff (Retd.)",
       expertise: "2017 Karnataka Rajyotsava Prashasti",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ramesh",
+      image: speaker1,
       bio: "Distinguished military leader and strategist",
     },
     {
       name: "Dr. R. V. Nadagouda",
       affiliation: "Distinguished Scientist & Associate Director (Projects), U. R. Rao Satellite Centre (URSC), ISRO, Bangalore",
       expertise: "2025 Karnataka Rajyotsava Prashasti",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nadagouda",
+      image: speaker2,
       bio: "Leading scientist in satellite technology",
     },
     {
       name: "Dr. Vinod Chippalkatti",
       affiliation: "President, SEBU, Centum Electronics",
       expertise: "Electronics & Systems",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Vinod",
+      image: speaker3,
       bio: "Industry leader in electronics systems",
     },
     {
       name: "Mr. Sunil V. Kulkarni",
       affiliation: "Deputy Director, Payload Data Management & Space Astronomy Area, URSC, ISRO, Bangalore",
       expertise: "Space Astronomy",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sunil",
+      image: speaker4,
       bio: "Expert in payload data management systems",
     },
     {
       name: "Mr. Pramod V. Belgaonkar",
       affiliation: "Deputy Director, Integration & Checkout Area, URSC, ISRO, Bangalore",
       expertise: "Integration & Testing",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Pramod",
+      image: speaker5,
       bio: "Specialist in satellite integration and testing",
     },
     {
       name: "Mr. Puneet Kumar Mishra",
       affiliation: "Global VP (Education), IEEE AESS & SH, EIS-3, URSC, ISRO",
       expertise: "IEEE AESS Leadership",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Puneet",
+      image: speaker6,
       bio: "IEEE AESS education and outreach leader",
     },
   ];
