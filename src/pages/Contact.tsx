@@ -28,20 +28,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "info@ieeeaess-conclave.org",
-      link: "mailto:info@ieeeaess-conclave.org",
+      details: "manusabnis@ieee.org",
+      link: "mailto:manusabnis@ieee.org",
     },
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 (0) 123-456-7890",
-      link: "tel:+911234567890",
+      details: "+91 7847032997",
+      link: "tel:+917847032997",
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "Conference Hall, Tech Campus",
-      link: "#",
+      details: "KLE Technological University, Dr. M. S. Sheshgiri Campus, Belagavi",
+      link: "https://maps.app.goo.gl/NCTBvz9G2zKfhv5VA",
     },
     {
       icon: Clock,
