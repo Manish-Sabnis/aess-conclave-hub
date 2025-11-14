@@ -29,18 +29,6 @@ const Register = () => {
       formLink: "https://forms.gle/yEnFJWj5NkjFgYux9",
     },
     {
-      title: "Non-IEEE Student Member",
-      price: "General Rate",
-      features: [
-        "Full access to all sessions at Rs. 200",
-        "Conference materials",
-        "Certificate of participation",
-        "Networking events",
-      ],
-      highlight: false,
-      formLink: "https://forms.gle/sMXvrvL31quT7vFo8",
-    },
-    {
       title: "Professional Member",
       price: "Complimentary Access",
       features: [
@@ -51,6 +39,18 @@ const Register = () => {
       ],
       highlight: false,
       formLink: "https://forms.gle/ShXkqEtQ5As6eKQF8",
+    },
+    {
+      title: "Non-IEEE Student Member",
+      price: "General Rate",
+      features: [
+        "Full access to all sessions at Rs. 200",
+        "Conference materials",
+        "Certificate of participation",
+        "Networking events",
+      ],
+      highlight: false,
+      formLink: "https://forms.gle/sMXvrvL31quT7vFo8",
     },
   ];
 
