@@ -29,18 +29,6 @@ const Register = () => {
       formLink: "https://forms.gle/yEnFJWj5NkjFgYux9",
     },
     {
-      title: "Professional Member",
-      price: "Complimentary Access",
-      features: [
-        "Free access to all sessions",
-        "Registration kit",
-        "Certificate of participation",
-        "Networking events",
-      ],
-      highlight: false,
-      formLink: "https://forms.gle/ShXkqEtQ5As6eKQF8",
-    },
-    {
       title: "Non-IEEE Student Member",
       price: "General Rate",
       features: [
@@ -54,6 +42,19 @@ const Register = () => {
     },
   ];
 
+  const professionalType = {
+    title: "Professional Member",
+    price: "Complimentary Access",
+    features: [
+      "Free access to all sessions",
+      "Registration kit",
+      "Certificate of participation",
+      "Networking events",
+    ],
+    highlight: false,
+    formLink: "https://forms.gle/ShXkqEtQ5As6eKQF8",
+  };
+
   return (
     <div className="min-h-screen py-24 px-4">
       <div className="container mx-auto">
@@ -66,7 +67,7 @@ const Register = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {registrationTypes.map((type, index) => (
             <Card
               key={index}
@@ -106,6 +107,33 @@ const Register = () => {
               </Button>
             </Card>
           ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
+          <Card className="p-8 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300">
+            <h3 className="text-2xl font-bold mb-2 text-center">{professionalType.title}</h3>
+            <div className="text-center mb-6">
+              <span className="text-3xl font-bold text-primary">{professionalType.price}</span>
+            </div>
+
+            <ul className="space-y-4 mb-8">
+              {professionalType.features.map((feature, idx) => (
+                <li key={idx} className="flex items-start space-x-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Button
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+              asChild
+            >
+              <a href={professionalType.formLink} target="_blank" rel="noopener noreferrer">
+                Register Now
+              </a>
+            </Button>
+          </Card>
         </div>
 
         <div className="mt-16 max-w-3xl mx-auto">
