@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import speaker1 from "@/assets/speaker1.jpeg";
-import speaker2 from "@/assets/speaker2.jpeg";
+import speaker2 from "@/assets/speaker2.png";
 import speaker3 from "@/assets/speaker3.jpeg";
 import speaker4 from "@/assets/speaker4.png";
 import speaker5 from "@/assets/speaker5.png";
