@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
+      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzAwYmNkNCIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -44,12 +44,12 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/speakers">
-                <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10">
+                <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary">
                   View Speakers
                 </Button>
               </Link>
               <a href="/event_flyer.pdf" download="IEEE-AESS-Conclave-Flyer.pdf">
-                <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10">
+                <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary">
                   <Download className="w-5 h-5 mr-2" />
                   Download Flyer
                 </Button>

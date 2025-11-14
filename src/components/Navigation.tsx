@@ -22,17 +22,42 @@ const Navigation = () => {
   return (
     <>
       {/* Logos Section */}
-      <div className="bg-secondary/30 border-b border-border/50 py-4 md:py-6">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="flex items-center justify-between gap-2 md:gap-8">
-            {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => (
-              <div
-                key={index}
-                className={`${index === 3 ? 'w-40 sm:w-48 md:w-64' : 'w-24 sm:w-32 md:w-40'} h-20 sm:h-24 md:h-28 rounded-lg bg-background/50 border border-border/50 flex items-center justify-center hover:bg-background transition-all duration-300 p-2 md:p-3`}
-              >
-                <img src={logo} alt={`Partner logo ${index + 1}`} className="w-full h-full object-contain" />
-              </div>
-            ))}
+      <div className="py-3 md:py-8">
+        <div className="container mx-auto px-4 md:px-12">
+          <div className="flex items-center justify-center gap-4 md:gap-12">
+            {[logo1, logo2, logo3, logo4, logo5].map((logo, index) => {
+              // Logo 1 (index 0) and Logo 4 (index 3) - horizontal, enlarge
+              // Logo 2 (index 1) and Logo 5 (index 4) - square, shrink
+              // Logo 3 (index 2) - middle one
+              let widthClass = '';
+              if (index === 0) {
+                // Horizontal logos - larger
+                widthClass = 'w-38 sm:w-44 md:w-72';
+              } else if (index === 1) {
+                // Square logos - smaller
+                widthClass = 'w-20 sm:w-24 md:w-32';
+              }
+              else if (index === 3) {
+                // Horizontal logos - larger
+                widthClass = 'w-38 sm:w-44 md:w-80';
+              }
+                else if (index === 4) {
+                // Square logos - smaller
+                widthClass = 'w-20 sm:w-24 md:w-30';
+              } else {
+                // Middle logo
+                widthClass = 'w-40 sm:w-48 md:w-50';
+              }
+              
+              return (
+                <div
+                  key={index}
+                  className={`${widthClass} h-20 sm:h-24 md:h-32 rounded-lg bg-background/50 flex items-center justify-center hover:bg-background transition-all duration-300 p-2 md:p-3`}
+                >
+                  <img src={logo} alt={`Partner logo ${index + 1}`} className="w-full h-full object-contain" />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -53,8 +78,8 @@ const Navigation = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className="px-4 py-2 rounded-lg transition-all duration-300 hover:bg-secondary/50"
-                activeClassName="bg-secondary text-primary"
+                className="px-4 py-2 rounded-lg transition-all duration-300 hover:bg-secondary/10"
+                activeClassName="bg-secondary/5 text-primary"
               >
                 {item.name}
               </NavLink>
