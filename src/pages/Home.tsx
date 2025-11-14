@@ -182,20 +182,19 @@ const Home = () => {
 
             <Card className="p-8 bg-gradient-card border-border/50">
               <h3 className="text-2xl font-bold mb-4">Campus Map</h3>
-              <a 
-                href="https://maps.app.goo.gl/FwJf4gKqMKNkAdax6" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block aspect-video bg-secondary/20 rounded-lg flex items-center justify-center border border-border/50 hover:border-primary/50 transition-all duration-300 group"
-              >
-                <div className="text-center space-y-2">
-                  <MapPin className="w-12 h-12 text-primary mx-auto group-hover:scale-110 transition-transform" />
-                  <p className="text-muted-foreground">
-                    Click to view location<br />
-                    on Google Maps
-                  </p>
-                </div>
-              </a>
+              <div className="aspect-video rounded-lg overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-300">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  frameBorder={0}
+                  title="KLE Technological University Campus Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6901293961414!2d74.4960245747105!3d15.820284884823709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65ce55555555%3A0x9b70f622a9a0fb44!2sKLE%20Technological%20University&#39;s%2C%20Dr.%20M.%20S.%20Sheshgiri%20Campus!5e0!3m2!1sen!2sus!4v1763123091660!5m2!1sen!2sus"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  style={{ border: 0 }}
+                ></iframe>
+              </div>
               <div className="mt-6 space-y-3">
                 <h4 className="font-semibold">Nearby Landmarks</h4>
                 <ul className="space-y-2 text-muted-foreground">

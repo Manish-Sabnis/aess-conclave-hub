@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 
 const Register = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
   const registrationTypes = [
     {
       title: "IEEE AESS Student Member",
@@ -40,19 +43,45 @@ const Register = () => {
       highlight: false,
       formLink: "https://forms.gle/sMXvrvL31quT7vFo8",
     },
+    {
+      title: "Professional Member",
+      price: "Complimentary Access",
+      features: [
+        "Free access to all sessions",
+        "Registration kit",
+        "Certificate of participation",
+        "Networking events",
+      ],
+      highlight: false,
+      formLink: "https://forms.gle/ShXkqEtQ5As6eKQF8",
+    },
   ];
 
-  const professionalType = {
-    title: "Professional Member",
-    price: "Complimentary Access",
-    features: [
-      "Free access to all sessions",
-      "Registration kit",
-      "Certificate of participation",
-      "Networking events",
-    ],
-    highlight: false,
-    formLink: "https://forms.gle/ShXkqEtQ5As6eKQF8",
+  const faqs = [
+    {
+      question: "Who can register as an IEEE AESS Member?",
+      answer: "Members of the IEEE Aerospace and Electronics Society receive free entry to the conclave. You must have an active AESS membership to qualify for this category."
+    },
+    {
+      question: "What are the benefits for IEEE Members?",
+      answer: "Current IEEE student members are eligible for standard registration rates at Rs. 100, which includes access to all technical sessions, keynote presentations, and networking events."
+    },
+    {
+      question: "Can non-IEEE members attend?",
+      answer: "Yes! The conclave is open to all students interested in aerospace and electronics technology. Non-IEEE members can register at Rs. 200 with full access to all sessions."
+    },
+    {
+      question: "What does Professional Member registration include?",
+      answer: "Professionals and researchers are invited to attend with complimentary access. This includes free entry to all sessions, a registration kit, certificate of participation, and networking events."
+    },
+    {
+      question: "What is included in the registration?",
+      answer: "All registration types include access to technical sessions, keynote presentations, conference materials, certificate of participation, and networking events. The specific details vary by registration category."
+    }
+  ];
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
   };
 
   return (
@@ -67,38 +96,38 @@ const Register = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
           {registrationTypes.map((type, index) => (
             <Card
               key={index}
-              className={`p-8 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 ${
-                type.highlight ? "border-primary/50 shadow-glow scale-105" : ""
+              className={`p-6 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 flex flex-col ${
+                type.highlight ? "border-primary/50 shadow-glow lg:scale-105" : ""
               }`}
             >
               {type.highlight && (
                 <div className="text-center mb-4">
-                  <span className="text-primary text-sm font-semibold tracking-wider uppercase px-4 py-1 rounded-full bg-primary/10 border border-primary/20">
+                  <span className="text-primary text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
                     Recommended
                   </span>
                 </div>
               )}
               
-              <h3 className="text-2xl font-bold mb-2 text-center">{type.title}</h3>
+              <h3 className="text-xl font-bold mb-2 text-center">{type.title}</h3>
               <div className="text-center mb-6">
-                <span className="text-3xl font-bold text-primary">{type.price}</span>
+                <span className="text-2xl font-bold text-primary">{type.price}</span>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-6 flex-grow">
                 {type.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{feature}</span>
+                  <li key={idx} className="flex items-start space-x-2">
+                    <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Button
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-auto"
                 asChild
               >
                 <a href={type.formLink} target="_blank" rel="noopener noreferrer">
@@ -109,54 +138,53 @@ const Register = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
-          <Card className="p-8 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300">
-            <h3 className="text-2xl font-bold mb-2 text-center">{professionalType.title}</h3>
-            <div className="text-center mb-6">
-              <span className="text-3xl font-bold text-primary">{professionalType.price}</span>
-            </div>
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+              Frequently Asked <span className="text-primary">Questions</span>
+            </h2>
+            <p className="text-muted-foreground">
+              Everything you need to know about registration
+            </p>
+          </div>
 
-            <ul className="space-y-4 mb-8">
-              {professionalType.features.map((feature, idx) => (
-                <li key={idx} className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">{feature}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card
+                key={index}
+                className="bg-gradient-card border-border/50 overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-secondary/10 transition-colors"
+                >
+                  <h3 className="text-lg font-semibold pr-4">{faq.question}</h3>
+                  <ChevronDown
+                    className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
+                      openFaq === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openFaq === index ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6 pt-2">
+                    <p className="text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
 
-            <Button
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-              asChild
-            >
-              <a href={professionalType.formLink} target="_blank" rel="noopener noreferrer">
-                Register Now
-              </a>
-            </Button>
-          </Card>
-        </div>
-
-        <div className="mt-16 max-w-3xl mx-auto">
-          <Card className="p-8 bg-secondary/20 border-border/50">
-            <h3 className="text-2xl font-bold mb-4">Registration Information</h3>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                <strong className="text-foreground">IEEE AESS Members:</strong> Members of the IEEE Aerospace and Electronics Society receive free entry to the conclave.
-              </p>
-              <p>
-                <strong className="text-foreground">IEEE Members:</strong> Current IEEE student members are eligible for standard registration rates.
-              </p>
-              <p>
-                <strong className="text-foreground">Non-IEEE Members:</strong> Open to all students interested in aerospace and electronics technology.
-              </p>
-              <p>
-                <strong className="text-foreground">Professional Members:</strong> Professionals and researchers are invited to attend with complimentary access.
-              </p>
-              <p className="text-sm mt-6 text-center">
-                Registration includes access to all technical sessions, keynote presentations, and networking events.
-              </p>
-            </div>
-          </Card>
+          <div className="mt-8 text-center">
+            <p className="text-sm text-muted-foreground">
+              Still have questions? Feel free to reach out to our team for assistance.
+            </p>
+          </div>
         </div>
       </div>
     </div>

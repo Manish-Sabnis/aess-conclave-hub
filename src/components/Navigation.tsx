@@ -35,7 +35,7 @@ const Navigation = () => {
                 widthClass = 'w-38 sm:w-44 md:w-72';
               } else if (index === 1) {
                 // Square logos - smaller
-                widthClass = 'w-20 sm:w-24 md:w-32';
+                widthClass = 'w-38 sm:w-24 md:w-32';
               }
               else if (index === 3) {
                 // Horizontal logos - larger
@@ -103,8 +103,8 @@ const Navigation = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="block px-4 py-2 rounded-lg transition-all duration-300 hover:bg-secondary/50"
-                  activeClassName="bg-secondary text-primary"
+                  className="block px-4 py-2 rounded-lg transition-all duration-300 hover:bg-secondary/10"
+                  activeClassName="bg-secondary/20 text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
