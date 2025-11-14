@@ -1,21 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -26,8 +12,11 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 7847032997",
-      link: "tel:+917847032997",
+      details: [
+        { num: "+91 7847032997", link: "tel:+917847032997" },
+        { num: "+91 9108733569", link: "tel:+919108733569" },
+        { num: "+91 7760932967", link: "tel:+917760932967" },
+      ],
     },
     {
       icon: MapPin,
@@ -55,6 +44,7 @@ const Contact = () => {
           </p>
         </div>
 
+        {/* Contact Info Cards */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {contactInfo.map((item, index) => (
             <Card
@@ -65,78 +55,33 @@ const Contact = () => {
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <a
-                href={item.link}
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                {item.details}
-              </a>
+
+              {/* Render phone numbers OR normal string */}
+              {Array.isArray(item.details) ? (
+                <div className="space-y-1">
+                  {item.details.map((ph, i) => (
+                    <a
+                      key={i}
+                      href={ph.link}
+                      className="block text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {ph.num}
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <a
+                  href={item.link}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {item.details}
+                </a>
+              )}
             </Card>
           ))}
         </div>
 
-        <Card className="p-8 bg-gradient-card border-border/50">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">
-                  Full Name
-                </label>
-                <Input
-                  id="name"
-                  placeholder="John Doe"
-                  className="bg-background/50 border-border/50"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
-                  Email Address
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="john@example.com"
-                  className="bg-background/50 border-border/50"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="subject" className="text-sm font-medium">
-                Subject
-              </label>
-              <Input
-                id="subject"
-                placeholder="What is this regarding?"
-                className="bg-background/50 border-border/50"
-                required
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">
-                Message
-              </label>
-              <Textarea
-                id="message"
-                placeholder="Your message here..."
-                rows={6}
-                className="bg-background/50 border-border/50 resize-none"
-                required
-              />
-            </div>
-
-            <Button
-              type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Send Message
-            </Button>
-          </form>
-        </Card>
-
+        {/* FAQ Section */}
         <Card className="mt-8 p-8 bg-secondary/20 border-border/50">
           <h3 className="text-2xl font-bold mb-4 text-center">
             Frequently Asked Questions
