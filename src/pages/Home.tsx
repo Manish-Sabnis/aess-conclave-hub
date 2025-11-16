@@ -1,9 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Check, ChevronDown, Clock } from "lucide-react";
 import { Calendar, MapPin, Users, Rocket, Download } from "lucide-react";
 
 const Home = () => {
+
+  const [openFaq, setOpenFaq] = useState(null);
+    const [timeLeft, setTimeLeft] = useState({
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    });
+  
+    useEffect(() => {
+      const calculateTimeLeft = () => {
+        // Target date: November 27, 2025, 10:00 PM IST
+        const targetDate = new Date('2025-11-27T22:00:00+05:30');
+        const now = new Date();
+        const difference = targetDate.getTime() - now.getTime();
+  
+        if (difference > 0) {
+          setTimeLeft({
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / 1000 / 60) % 60),
+            seconds: Math.floor((difference / 1000) % 60)
+          });
+        } else {
+          setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        }
+      };
+  
+      calculateTimeLeft();
+      const timer = setInterval(calculateTimeLeft, 1000);
+  
+      return () => clearInterval(timer);
+    }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -55,6 +91,46 @@ const Home = () => {
                 </Button>
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto sm:mb-0">
+          <div className="p-6 border-0">
+            <div className="flex items-center justify-center gap-2 mb-4 sm:mb-8">
+              <h2 className="text-4xl font-bold text-center mb-6">
+            Registration <span className="text-primary">Closes In</span>
+              </h2>
+            </div>
+            
+            {/* Fixed Timer Layout */}
+            <div className="flex justify-center items-center gap-2 sm:gap-8 max-w-2xl mx-auto">
+              {[
+                { label: 'Days', value: timeLeft.days },
+                { label: 'Hours', value: timeLeft.hours },
+                { label: 'Minutes', value: timeLeft.minutes },
+                { label: 'Seconds', value: timeLeft.seconds }
+              ].map((item, index) => (
+                <div key={index} className="flex items-center">
+                  {/* Time Unit */}
+                  <div className="flex flex-col items-center min-w-[60px] sm:min-w-[70px]">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-background/80 rounded-lg flex items-center justify-center shadow-sm border border-border/50 mb-1">
+                      <span className="text-xl sm:text-2xl font-bold text-primary">
+                        {String(item.value).padStart(2, '0')}
+                      </span>
+                    </div>
+                    <span className="text-xs sm:text-sm text-muted-foreground font-medium">
+                      {item.label}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <p className="text-center text-xs sm:text-sm text-muted-foreground mt-8">
+              Deadline: November 27, 2025 at 10:00 PM IST
+            </p>
           </div>
         </div>
       </section>

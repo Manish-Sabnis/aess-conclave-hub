@@ -1,11 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import speaker1 from "@/assets/speaker1.jpeg";
-import speaker2 from "@/assets/speaker2.png";
+import speaker2 from "@/assets/speaker2.jpg";
 import speaker3 from "@/assets/speaker3.jpeg";
-import speaker4 from "@/assets/speaker4.png";
-import speaker5 from "@/assets/speaker5.png";
-import speaker6 from "@/assets/speaker6.png";
+import speaker4 from "@/assets/speaker4.jpg";
+import speaker5 from "@/assets/speaker5.jpg";
+import speaker6 from "@/assets/speaker6.jpg";
 
 const Speakers = () => {
   const speakers = [
@@ -31,14 +31,14 @@ const Speakers = () => {
       bio: "Industry leader in electronics systems",
     },
     {
-      name: "Mr. Sunil V. Kulkarni",
+      name: "Mr. Sunil Kulkarni",
       affiliation: "Deputy Director, Payload Data Management & Space Astronomy Area, URSC, ISRO, Bangalore",
       expertise: "Space Astronomy",
       image: speaker4,
       bio: "Expert in payload data management systems",
     },
     {
-      name: "Mr. Pramod V. Belgaonkar",
+      name: "Mr. Pramod Belgaonkar",
       affiliation: "Deputy Director, Integration & Checkout Area, URSC, ISRO, Bangalore",
       expertise: "Integration & Testing",
       image: speaker5,
