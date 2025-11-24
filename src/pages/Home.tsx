@@ -129,7 +129,7 @@ const Home = () => {
             </div>
             
             <p className="text-center text-xs sm:text-sm text-muted-foreground mt-8">
-              Deadline: November 29, 2025 at 10:00 PM IST
+              Deadline: November 25, 2025 at 10:00 PM IST
             </p>
           </div>
         </div>
@@ -234,7 +234,7 @@ const Home = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Date & Time</h4>
                       <p className="text-muted-foreground">
-                        November 25, 2025<br />
+                        November 29, 2025<br />
                         Full day event with refreshments
                       </p>
                     </div>
