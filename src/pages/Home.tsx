@@ -234,7 +234,7 @@ const Home = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Date & Time</h4>
                       <p className="text-muted-foreground">
-                        November 29, 2025<br />
+                        November 25, 2025<br />
                         Full day event with refreshments
                       </p>
                     </div>
