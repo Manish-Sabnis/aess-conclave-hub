@@ -14,8 +14,8 @@ const Register = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      // Target date: November 27, 2025, 10:00 PM IST
-      const targetDate = new Date('2025-11-27T22:00:00+05:30');
+      // Target date: November 25, 2025, 10:00 PM IST
+      const targetDate = new Date('2025-11-25T22:00:00+05:30');
       const now = new Date();
       const difference = targetDate.getTime() - now.getTime();
 
@@ -153,7 +153,7 @@ const Register = () => {
             </div>
             
             <p className="text-center text-xs sm:text-sm text-muted-foreground mt-8">
-              Deadline: November 27, 2025 at 10:00 PM IST
+              Deadline: November 25, 2025 at 10:00 PM IST
             </p>
           </div>
         </div>

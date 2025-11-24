@@ -17,8 +17,8 @@ const Home = () => {
   
     useEffect(() => {
       const calculateTimeLeft = () => {
-        // Target date: November 27, 2025, 10:00 PM IST
-        const targetDate = new Date('2025-11-27T22:00:00+05:30');
+        // Target date: November 25, 2025, 10:00 PM IST
+        const targetDate = new Date('2025-11-25T22:00:00+05:30');
         const now = new Date();
         const difference = targetDate.getTime() - now.getTime();
   
@@ -65,7 +65,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-lg md:text-xl font-semibold text-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="w-5 h-5 text-primary" />
-                <span>29th November 2025</span>
+                <span>25th November 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-muted-foreground">•</span>
@@ -129,7 +129,7 @@ const Home = () => {
             </div>
             
             <p className="text-center text-xs sm:text-sm text-muted-foreground mt-8">
-              Deadline: November 27, 2025 at 10:00 PM IST
+              Deadline: November 25, 2025 at 10:00 PM IST
             </p>
           </div>
         </div>
@@ -234,7 +234,7 @@ const Home = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Date & Time</h4>
                       <p className="text-muted-foreground">
-                        November 29, 2025<br />
+                        November 25, 2025<br />
                         Full day event with refreshments
                       </p>
                     </div>
